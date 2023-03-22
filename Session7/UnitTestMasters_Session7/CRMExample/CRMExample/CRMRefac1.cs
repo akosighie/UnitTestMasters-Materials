@@ -1,4 +1,4 @@
-namespace CRMTest1
+namespace CRMRefac1
 {
     public class Tests
     {

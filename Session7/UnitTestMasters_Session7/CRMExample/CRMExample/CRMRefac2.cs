@@ -1,4 +1,4 @@
-﻿namespace CRMTest2
+﻿namespace CRMRefac2
 {
     public class Tests
     {
@@ -114,6 +114,7 @@
             object[] userData = _database.GetUserById(userId);
             User user = UserFactory.Create(userData);
 
+            //check this
             object[] companyData = _database.GetCompany();
             string companyDomainName = (string)companyData[0];
             int numberOfEmployees = (int)companyData[1];

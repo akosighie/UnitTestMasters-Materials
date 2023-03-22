@@ -1,4 +1,4 @@
-﻿namespace CRMTest3
+﻿namespace CRMRefac3
 {
     public class Tests
     {
@@ -82,6 +82,7 @@
         public int UserId { get; private set; }
         public string Email { get; private set; }
         public UserType Type { get; private set; }
+        //public bool IsEmailConfirmed { get; private set; }
 
         public User(int userId, string email, UserType type)
         {
@@ -133,6 +134,9 @@
         {
             object[] userData = _database.GetUserById(userId);
             User user = UserFactory.Create(userData);
+
+            //if (user.IsEmailConfirmed)
+            //    return "Can't change a confirmed email";
 
             object[] companyData = _database.GetCompany();
             Company company = CompanyFactory.Create(companyData);
